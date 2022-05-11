@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+body,
+html {
+  width: 100%;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 40rem;
+  background-image: url(./sunnyside-agency-landing-page-main/images/mobile/image-header.jpg);
+  background-size: 100% 80%;
+  background-repeat: no-repeat;
+}
+
+.nav {
+  position: relative;
+}
+.nav--mobile {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 1.5rem;
+}
+.nav--mobile button {
+  background: none;
+  border: none;
+}
+/* BURGER MENU */
+.nav--mobile-menu {
+  position: absolute;
+  border: none;
+  width: 88%;
+  left: 0;
+  transform-origin: center;
+  transform: translateX(7%);
+  text-align: center;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.nav--mobile-link {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  margin: 2.8rem 2.5rem;
+  list-style: none;
+  color: hsl(232, 10%, 55%);
+  font-size: 18px;
+}
+
+.nav--mobile-link:hover {
+  text-transform: uppercase;
+  font-family: "Fraunces", sans-serif;
+}
+
+.triangle {
+  position: absolute;
+  right: 0;
+  transform: translate(1%, -40%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 30px 25px 0;
+  border-color: transparent #fcffff transparent transparent;
+  line-height: 0px;
+  _border-color: #000000 #fcffff #000000 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+
+.nav.hidden .nav--mobile-menu {
+  display: none;
+  transition: 0.5s ease-in;
+}
+.nav .nav--mobile-burger {
+  opacity: 0.5;
+}
+.nav.hidden .nav--mobile-burger {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 40rem;
+    background-image: url(./sunnyside-agency-landing-page-main/images/desktop/image-header.jpg);
+    background-size: 100% auto cover;
+    background-repeat: no-repeat;
+  }
+}
